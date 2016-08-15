@@ -27,6 +27,18 @@ ListsController
   Item must have description
 
 ##5: Add States (Complete/Incomplete) to Items
+  What URL needed?
+    Database changes?
+    New form for updating --> new URL
+    PUT/PATCH /lists/:id/items/:id
+  Add checkbox to view
+  <input class="toggle" type="checkbox">
+  Add JS function to submit the form when check
+
+  Start using partial in list show
+
 
 ##6: Delete items from list
+
+
   
