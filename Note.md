@@ -40,5 +40,9 @@ ListsController
 
 ##6: Delete items from list
 
+##7: User signup and signin
+
+##8: Authorizations
+
 
   

@@ -3964,3 +3964,106 @@ Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5dec
 
 
 Started GET "/assets/lists.self-9d4b2205ff736a0fd786f2190e96956207bdff8a1be9030fbf6c080af703dc13.js?body=1" for ::1 at 2016-08-16 12:47:10 -0400
+
+
+Started GET "/lists/5" for ::1 at 2016-08-16 18:03:48 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (13.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mList Load (18.7ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mItem Load (19.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 5]]
+  Rendered items/_item_li.html.erb (20.8ms)
+  Rendered lists/show.html.erb within layouts/application (212.6ms)
+Completed 200 OK in 1784ms (Views: 1331.0ms | ActiveRecord: 38.9ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-08-16 18:03:52 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-16 18:03:53 -0400
+
+
+Started GET "/assets/todomvc-base.self-bf1d703a9de961ea61ccf69f9b4094fed700d6830aaffdd1b3498c467963b8a4.css?body=1" for ::1 at 2016-08-16 18:03:53 -0400
+
+
+Started GET "/assets/lists.self-871490d934e0730e680d5ba20d31700d7038256955f0b36134b43919fbc2860e.css?body=1" for ::1 at 2016-08-16 18:03:53 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-08-16 18:03:53 -0400
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-16 18:03:53 -0400
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-16 18:03:53 -0400
+
+
+Started GET "/assets/lists.self-9d4b2205ff736a0fd786f2190e96956207bdff8a1be9030fbf6c080af703dc13.js?body=1" for ::1 at 2016-08-16 18:03:53 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-16 18:03:53 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-16 18:03:53 -0400
+
+
+Started DELETE "/lists/5/items/3" for ::1 at 2016-08-16 18:04:01 -0400
+Processing by ItemsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"VHNqL3IWEZCwr3MFR/uE9PoLXfLcfxv2LgzMFByMYX+jv6EJ3+Ye/XTYdFjo3tV0ELyREHK4EFDQfTsoJXE8wQ==", "list_id"=>"5", "id"=>"3"}
+  [1m[35mItem Load (0.2ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (16.3ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 3]]
+  [1m[36m (49.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mList Load (0.1ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1  [["id", 5]]
+Redirected to http://localhost:3000/lists/5
+Completed 302 Found in 70ms (ActiveRecord: 66.0ms)
+
+
+Started GET "/lists/5" for ::1 at 2016-08-16 18:04:01 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 5]]
+  Rendered items/_item_li.html.erb (0.9ms)
+  Rendered lists/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/lists/5" for ::1 at 2016-08-16 18:07:42 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 5]]
+  Rendered items/_item_li.html.erb (1.5ms)
+  Rendered lists/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 154ms (Views: 152.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-16 18:07:42 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-08-16 18:07:42 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-08-16 18:07:42 -0400
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-16 18:07:42 -0400
+
+
+Started GET "/assets/lists.self-871490d934e0730e680d5ba20d31700d7038256955f0b36134b43919fbc2860e.css?body=1" for ::1 at 2016-08-16 18:07:42 -0400
+
+
+Started GET "/assets/todomvc-base.self-bf1d703a9de961ea61ccf69f9b4094fed700d6830aaffdd1b3498c467963b8a4.css?body=1" for ::1 at 2016-08-16 18:07:42 -0400
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-16 18:07:42 -0400
+
+
+Started GET "/assets/lists.self-9d4b2205ff736a0fd786f2190e96956207bdff8a1be9030fbf6c080af703dc13.js?body=1" for ::1 at 2016-08-16 18:07:42 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-16 18:07:42 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-16 18:07:42 -0400
